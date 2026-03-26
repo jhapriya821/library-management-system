@@ -1,12 +1,13 @@
 import streamlit as st
-from sqlalchemy import create_engine, URL, text
+from sqlalchemy import create_engine, text
+from sqlalchemy.engine import URL
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
 @st.cache_resource
-def get_connection():
+def get_engine():
     connection_url = URL.create(
         drivername="mysql+pymysql",
         username=os.getenv("DB_USER"),
@@ -14,5 +15,8 @@ def get_connection():
         host=os.getenv("DB_HOST"),
         database=os.getenv("DB_NAME")
     )
+    return create_engine(connection_url)
 
-    engine = create_engine(connection_url)
+engine = get_engine()
+
+st.title("Library Management System")
