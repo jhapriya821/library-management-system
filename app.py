@@ -1,5 +1,5 @@
 import streamlit as st
-from sqlalchemy import create_engine, URL
+from sqlalchemy import create_engine, URL, text
 from dotenv import load_dotenv
 import os
 
