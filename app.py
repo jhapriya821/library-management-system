@@ -18,4 +18,6 @@ def get_engine():
     return create_engine(connection_url)
 
 engine = get_engine()
-st.title("Library Management System")
+st.set_page_config(page_title="Library Management System", layout="wide")
+
+st.title("Overview")
