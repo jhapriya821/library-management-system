@@ -16,3 +16,14 @@ CREATE TABLE books (
     created_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (author_id) REFERENCES authors(author_id)
 );
+
+CREATE TABLE friends (
+    friend_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE
+);
+INSERT INTO friends (name, email)
+VALUES 
+('Liane Reader', 'liane@example.com'),
+('Sarah Connor', 'sarah@sky.net'),
+('James Bond', '007@mi6.gov');
