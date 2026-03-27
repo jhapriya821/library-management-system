@@ -5,7 +5,7 @@ CREATE TABLE authors (
     first_name  VARCHAR(100) NOT NULL,
     last_name   VARCHAR(100) NOT NULL,
     rating      VARCHAR(5) DEFAULT 1,
-    created_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE books (
